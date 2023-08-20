@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{06BB9137-EC77-4715-A5A8-23FBEE3D6B58}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DO_AN</RootNamespace>
+    <AssemblyName>DO_AN</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=6.2.8.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.6.2.8\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=6.1.1.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.Interfaces.6.1.1\lib\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing, Version=6.1.1.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.System.Drawing.6.1.1\lib\net462\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BAL\CustomerBAL.cs" />
+    <Compile Include="BAL\ChatLieuBAL.cs" />
+    <Compile Include="BAL\NguyeLieuBAL.cs" />
+    <Compile Include="BAL\HDBanBAL.cs" />
+    <Compile Include="BAL\KhachBAL.cs" />
+    <Compile Include="BAL\NhanVienBAL.cs" />
+    <Compile Include="DAL\ChatLieuDAL.cs" />
+    <Compile Include="DAL\CustomerDAL.cs" />
+    <Compile Include="DAL\DBConnection.cs" />
+    <Compile Include="DAL\LoginDAL.cs" />
+    <Compile Include="DAL\NguyenLieuDAL.cs" />
+    <Compile Include="DAL\HDBanDAL.cs" />
+    <Compile Include="DAL\KhachDAL.cs" />
+    <Compile Include="DAL\NhanVienDAL.cs" />
+    <Compile Include="GUI\CAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CAT.Designer.cs">
+      <DependentUpon>CAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DUNGCU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DUNGCU.Designer.cs">
+      <DependentUpon>DUNGCU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DONHANG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DONHANG.Designer.cs">
+      <DependentUpon>DONHANG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HOADON.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HOADON.Designer.cs">
+      <DependentUpon>HOADON.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KHACHHANG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KHACHHANG.Designer.cs">
+      <DependentUpon>KHACHHANG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NGUYENLIEU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NGUYENLIEU.Designer.cs">
+      <DependentUpon>NGUYENLIEU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MENU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MENU.Designer.cs">
+      <DependentUpon>MENU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NHANVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NHANVIEN.Designer.cs">
+      <DependentUpon>NHANVIEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TIMNGUYENLIEU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TIMNGUYENLIEU.Designer.cs">
+      <DependentUpon>TIMNGUYENLIEU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL\ChatLieu.cs" />
+    <Compile Include="MODEL\NguyenLieu.cs" />
+    <Compile Include="MODEL\HDBan.cs" />
+    <Compile Include="MODEL\Khach.cs" />
+    <Compile Include="MODEL\Login.cs" />
+    <Compile Include="MODEL\NhanVien.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\CAT.resx">
+      <DependentUpon>CAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DUNGCU.resx">
+      <DependentUpon>DUNGCU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DONHANG.resx">
+      <DependentUpon>DONHANG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HOADON.resx">
+      <DependentUpon>HOADON.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KHACHHANG.resx">
+      <DependentUpon>KHACHHANG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NGUYENLIEU.resx">
+      <DependentUpon>NGUYENLIEU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MENU.resx">
+      <DependentUpon>MENU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NHANVIEN.resx">
+      <DependentUpon>NHANVIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TIMNGUYENLIEU.resx">
+      <DependentUpon>TIMNGUYENLIEU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinhnen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\luan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z4606435140237_6b15d444c5a7662d4ca0743ab73aaf6b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\th %2824%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\th %2825%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\th %2826%29.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
